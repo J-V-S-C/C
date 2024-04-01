@@ -1,0 +1,58 @@
+/*Elabore uma função que receba três nnotas de um aluno como parâmetro e uma letra. Se a
+letra for ‘A’, a função deve calcular a média aritmética das notas do aluno; se a letra for ‘P’,
+deverá calcular a média ponderada, com pesos 5,3 e 2. Retorne a média calculada para o
+programa principal.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+
+
+void funcao(int num1, int num2, int num3,  int *aritimetica, int *ponderada)
+{
+
+      *aritimetica=(num1+num2+num3)/3;
+
+
+    *ponderada=(num1*5+num2*3+num3*2)/10;
+
+
+
+}
+main()
+{
+setlocale(LC_ALL, "portuguese");
+int n1, n2, n3, r1, r2;
+char letra;
+
+
+
+printf("Digite sua primeira nota: ");
+scanf("%d", &n1);
+
+printf("\nDigite sua segunda nota: ");
+scanf("%d", &n2);
+
+printf("\nDigite sua terceira nota: ");
+scanf("%d", &n3);
+
+
+printf("\nDigite 'A' e a função vai calcular a média aritmética das notas do aluno; digite ‘P’ para calcular a média ponderada,\ncom pesos 5,3 e 2.: ");
+scanf("%s", &letra);
+
+
+
+
+funcao(n1, n2, n3, &r1, &r2);
+
+  if(letra=='A' || 'a')
+  {printf("\nMédia aritimética: %d", r1);}
+
+    else if(letra=='P' || 'p')
+  {
+printf("\nMédia ponderada: %d", r2);
+
+
+}
+else printf("Digitou errado");}
+

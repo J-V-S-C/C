@@ -1,0 +1,52 @@
+/*-Escreva em C a função CONTA. A função recebe uma string (nome) e devolve via
+parâmetros: número letras maiúsculas e o número letras minúsculas. A função retorna
+o total de letras do nome.
+*/
+
+#include<stdio.h>
+#include<locale.h>
+#include<string.h>
+#include<ctype.h>
+
+void CONTA(char a[20], int *maiusculas, int *minusculas)
+{
+    *maiusculas = 0;
+    *minusculas = 0;
+
+    for(int i=0; i<strlen(a); i++)
+        {
+            if (isupper (a[i]))
+                {       
+                    (*maiusculas)++;
+                }
+
+
+            else if (islower(a[i]))
+                {
+                    (*minusculas)++;
+                }
+
+        }
+}
+
+
+
+
+main()
+{
+    char Nome[20];
+    int n, MAIUSCULA, MINUSCULA;
+
+    setlocale(LC_ALL, "portuguese");
+
+
+
+    printf("Digite seu nome\n");
+    scanf("%s", Nome);
+
+
+    CONTA(Nome, &MAIUSCULA, &MINUSCULA);
+
+    printf("Maiusculas: %d\n" ,MAIUSCULA);
+    printf("Minusculas: %d\n" ,MINUSCULA);
+}

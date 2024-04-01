@@ -1,0 +1,51 @@
+/*Desenvolva um programa para calcular e comparar a área de dois triângulos A e B, o
+programa deverá dizer qual triângulo possui a maior área ou se eles possuem tamanhos
+iguais. Esse programa deve possuir uma função para calcular a área do triângulo. Dados
+de entrada: tamanho da base e da altura (tipo das variáveis: inteiro, valor em centímetros).
+*/
+
+#include<stdio.h>
+#include<locale.h>
+
+int imprimevetormax( int h, int v, int h2, int v2)
+{
+    int a1, a2;
+    a1=(h*v)/2;
+    a2=(h2*v2)/2;
+
+
+    if(a2>a1)
+    printf("\nO triângulo B tem área maior q o A");
+
+        else if( a1>a2)
+             printf("\nO triângulo A tem área maior q o B");
+
+        else if(a1==a2)
+        printf("\nO triângulo A tem área igual ao B");
+}
+
+
+
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int l,a, l2, a2;
+
+    printf("\nEscreva os valores dos lados do triângulo A(em cm): ");
+    printf("\nLargura: ");
+    scanf("%d", &l);
+    printf("\nAltura: ");
+    scanf("%d", &a);
+
+
+    printf("\nAgora escreva os valores dos lados do triângulo B(em cm): ");
+    printf("\nLargura: ");
+    scanf("%d", &l2);
+    printf("\nAltura: ");
+    scanf("%d", &a2);
+
+
+imprimevetormax(a, l, a2, l2);
+
+}

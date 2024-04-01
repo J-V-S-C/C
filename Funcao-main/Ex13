@@ -1,0 +1,49 @@
+/*--- Elabore uma função que receba um vetor contendo N valores e retorne por referência o
+maior elemento do vetor e o número de vezes que esse elemento ocorreu no vetor.
+*/
+
+#include<stdio.h>
+#include<locale.h>
+
+int imprimevetormax( int n, int K[n], int *r)
+{
+    int i, maior=0;
+    *r=1;
+
+for (i=0; i<n; i++)
+{
+    if(K[i]>maior)
+        {maior=K[i];
+        *r=1;
+        }
+        else if( K[i] == maior)
+            *r=*r+1;
+}
+return maior;
+
+}
+
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int n;
+    printf("\nEscreva o número de posições do vetor: ");
+    scanf("%d", &n);
+
+    int v[n], greg, l;
+
+    for(int c=0; c<n; c++)
+    {
+        printf("\nDigite o número do vetor: ");
+        scanf("%d", &v[c]);
+    }
+
+greg=imprimevetormax(n, v, &l);
+
+printf("\nO maior elemento é: %d", greg);
+printf("\nrepetições: %d", l);
+
+return n;
+
+}

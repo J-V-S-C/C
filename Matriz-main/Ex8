@@ -1,0 +1,36 @@
+/*Criar um algoritmo que armazene dados inteiros em uma matriz de ordem cinco e imprima:
+toda a matriz e uma outra matriz formada pelos números que se encontram em posições cuja linha
+mais coluna formam um número par.*/
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int M[3][3], l, c, v;
+
+    for (l = 0; l < 3; l++)
+        for (c = 0; c < 3; c++)
+        {
+            printf("Digite um número:\n");
+            scanf("%d", &M[l][c]);
+        }
+
+    for (l = 0; l < 3; l++)
+
+        for (c = 0; c < 3; c++)
+        {
+
+            printf("Os elementos da matriz são %d\n", M[l][c]);
+
+        }
+          for (l = 0; l < 3; l++)
+        for (c = 0; c < 3; c++)
+        {
+            if((l + c)%2==0)
+            printf("Os elementos da segunda matriz são %d\n", M[l][c]);
+        }
+
+
+}

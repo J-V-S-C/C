@@ -1,0 +1,46 @@
+/*-- Escreva a função: VOGAIS. A função recebe uma string (nome) e retorna a quantidade de
+vogais da string
+
+*/
+
+#include<stdio.h>
+#include<locale.h>
+#include<string.h>
+#include<ctype.h>
+
+int Vogais(char a[20])
+{
+    int QV;
+
+    for (int i = 0; i<strlen(a); i++) {
+        char caractere = tolower(a[i]);
+
+        if (caractere == 'a' || caractere == 'e' || caractere == 'i' || caractere == 'o' || caractere == 'u') {
+            QV++;
+        }
+    }
+    return QV;
+}
+
+
+
+
+main()
+{
+    char Nome[20];
+    int n, vogais;
+
+    setlocale(LC_ALL, "portuguese");
+
+
+
+    printf("Digite seu nome\n");
+    scanf("%s", Nome);
+
+
+    vogais=Vogais(Nome);
+
+    printf("\nQuantidade de vogais: %d\n" ,vogais);
+    printf("\nString: %s", Nome);
+
+}

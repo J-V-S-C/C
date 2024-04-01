@@ -1,0 +1,45 @@
+/*Criar um algoritmo que leia e armazene os elementos de uma matriz inteira M(10,10) e
+imprimi-la. Troque, a seguir:
+ A segunda linha pela oitava linha;
+ A quarta coluna pela décima coluna;
+ A diagonal principal pela diagonal secundária.*/
+
+#include <stdio.h>
+#include <locale.h>
+
+main()
+
+{
+    setlocale(LC_ALL, "portuguese");
+    int M[10][10], l, c, contador = 0, receba;
+
+    for(l= 0; l < 10; l++)
+    {
+        for(c=0; c<10; c++)
+        {
+                M[l][c] = contador++;
+        }
+    }
+
+    for(l=0; l<10; l++)
+    {
+        for(c=0; c<10; c++)
+        {
+            printf("\n%d", M[l][c] );
+        }
+    }
+
+    for(l=0; l<10; l++)
+    {
+        for(c=0; c<10; c++)
+        {
+            if(   )
+                
+            printf("\n%d", M[l][c] );
+        }
+    }
+}
+
+
+
+

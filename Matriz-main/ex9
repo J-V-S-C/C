@@ -1,0 +1,43 @@
+/*Crie um algoritmo que leia uma matriz A[4][4] e retorne a média aritmética dos elementos
+abaixo da diagonal principal.*/
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int M[3][3], l, c, s=0, m, i=0;
+
+    for (l = 0; l < 3; l++)
+        for (c = 0; c < 3; c++)
+        {
+            printf("Digite um número:\n");
+            scanf("%d", &M[l][c]);
+
+        }
+
+    for (l = 0; l < 3; l++)
+
+        for (c = 0; c < 3; c++)
+        {
+
+       if( l > c )
+
+           {
+               s = s+M[l][c];
+
+              i++;
+            }
+
+
+        }
+
+        m = s/i;
+
+           printf("A média aritmética dos elementos abaixo da diagonal principal são %d\n", m);
+
+
+
+}
+

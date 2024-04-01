@@ -1,0 +1,51 @@
+/*-- - Escreva em C a função VERIFICA. A função recebe um número inteiro (n). A função deve
+devolver na variável resto o resto inteiro da divisão. A função deve retornar se o número (n) é
+par (1) ou ímpar (0).
+*/
+
+#include<stdio.h>
+#include<locale.h>
+#include<string.h>
+#include<ctype.h>
+#include<math.h>
+
+int verifica(int n)
+{
+    int resto;
+
+    resto=n%2;
+
+
+return resto;
+}
+
+
+
+
+main()
+{
+    int N1,R;
+
+    setlocale(LC_ALL, "portuguese");
+
+
+
+    printf("Digite um numero inteiro:");
+    scanf("%d", &N1);
+
+    R=verifica(N1);
+
+    printf("\nResto: %d" ,R);
+
+
+    if(R==0)
+
+        printf("\nO número é par");
+
+
+    else
+
+        printf("\nO número é ímpar");
+
+
+}

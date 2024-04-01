@@ -1,0 +1,30 @@
+/*Escreva uma função que, dado um número real passado como parâmetro, retorne a parte
+inteira e a parte fracionária desse número por referência.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+
+
+void funcao(double numero, int *inteiro, double *fracao)
+{
+    *inteiro=(int)numero;
+    *fracao=numero-*inteiro;
+
+}
+main()
+{
+setlocale(LC_ALL, "portuguese");
+double num, inti, fraco;
+
+printf("Digite um número racional: ");
+scanf("%lf", &num);
+
+funcao(num, &inti, &fraco);
+
+printf("\nParte inteira: %d", inti);
+printf("\nParte fracionária: %.2lf", fraco);
+
+
+}
+

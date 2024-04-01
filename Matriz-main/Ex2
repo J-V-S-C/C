@@ -1,0 +1,45 @@
+/*- Fazer um programa para ler uma matriz de tamanho M1xM2, e multiplicar a matriz por uma
+constante, ao final imprimir o valor da matriz resultante..*/
+
+#include<stdio.h>
+#include<locale.h>
+
+main()
+
+{
+setlocale(LC_ALL, "portuguese");
+int  l=0, c=0, C, m1, m2;
+
+ printf("Digite a constante:\\n");
+    scanf("%d", &C);
+
+     printf("Digite M1:\\n");
+    scanf("%d", &m1);
+
+     printf("Digite M2:\\n");
+    scanf("%d", &m2);
+
+int M[m1][m2], Mc[m1][m2];
+
+        for (l=0;l<m1;l++)
+                for (c=0;c<m2;c++)
+
+{
+printf("Digite a matriz:\\n");
+    scanf("%d", &M[l][c]);
+
+Mc[l][c]=C*M[l][c];
+
+}
+
+for (l=0;l<m1;l++)
+for (c=0;c<m2;c++)
+{
+printf("A multiplicação é %d:\n",Mc[l][c]);
+}
+}
+
+/*11 12 13 14
+21 22 23 24
+31 32 33 34
+41 42 43 44*/

@@ -1,0 +1,65 @@
+/*Escreva um programa que leia os dados de um funcionário e que aplique um aumento
+sobre o seu salário, sendo que a empresa definiu um aumento de 10% para quem possuir
+mais de cinco anos de casa e for casado, para os demais o aumento é de 8%. Esse
+aumento deve ser calculado por uma função. Dados de entrada: salário bruto, quantidades
+de anos na empresa, e estado civil (C, c, S, s). Dados de saída: taxa do aumento, salário
+inicial, e salário com aumento do funcionário.
+
+*/
+
+#include<stdio.h>
+#include<locale.h>
+
+void bin( float s2, int qa2, char ec2)
+{
+    float s3;
+
+    if(s2>5 && ec2=='c' || s2>5 && ec2=='C')
+    {
+        s3 = s2+( 0.10 * s2);
+        printf("\nSalário com aumento:%.2f", s3);
+
+    }
+
+    else if(ec2 == 's' || ec2 == 'S')
+    {
+        s3 = s2 + (0.08 * s2);
+        printf("\nSalário com aumento:%.2f", s3);
+    }
+}
+
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+    float s;
+    int qa;
+    char ec;
+
+    printf("\nDigite seu salário bruto: ");
+    scanf("%f", &s);
+
+    printf("\nDigite sua quantidade de anos na empresa: ");
+    scanf("%d", &qa);
+
+    printf("\nDigite seu estado civil (C, c, S, s): ");
+    scanf(" %c", &ec);
+
+        if(ec == 'c' || ec == 'C')
+    {
+        printf("\nA taxa de aumento foi de 10%");
+        printf("\nO salário inicial era : %.2f" ,s);
+    }
+
+    else if(ec == 's' || ec == 'S'){
+        printf("\nA taxa de aumento foi de 8%");
+        printf("\nO salário inicial era : %.2f" ,s);
+    }
+
+    else{printf("\nEstado civil inválido");}
+
+
+    bin(s, qa, ec);
+
+}
+

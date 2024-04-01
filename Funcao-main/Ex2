@@ -1,0 +1,96 @@
+/*-Escreva um programa que calcule as seguintes operacoes entre dois numeros dados:
+Adicao, Diferenca, Multiplicacao, Divisao, Exponeciacao e Media.*/
+
+#include<stdio.h>
+#include<locale.h>
+
+
+
+int soma(int a , int b)
+{
+int c;
+c=a+b;
+return c;
+}
+
+int diferenca(int a , int b)
+{
+int c;
+c=a-b;
+return c;
+}
+
+int multiplicacao(int a , int b)
+{
+int c;
+c=a*b;
+return c;
+}
+
+int divisao(int a , int b)
+{
+int c;
+c=a/b;
+return c;
+}
+
+int exponenciacao(int a , int b)
+{
+int c;
+c=pow(a,b);
+return c;
+}
+
+int media(int a , int b)
+{
+int c;
+c=(a+b)/2;
+return c;
+}
+
+main()
+{
+
+int m, n, k;
+
+setlocale(LC_ALL, "portuguese");
+
+
+
+printf("Digite um número\n");
+scanf("%d", &m);
+
+printf("Digite um número\n");
+scanf("%d", &n);
+
+
+k=soma(m, n);
+
+printf("soma:%d\n", k);
+
+
+k=diferenca(m, n);
+
+printf("diferença:%d\n", k);
+
+
+k=multiplicacao(m, n);
+
+printf("multiplicação:%d\n", k);
+
+
+k=divisao(m, n);
+
+printf("divisão:%d\n", k);
+
+k=exponenciacao(m, n);
+
+printf("Exponenciação:%d\n", k);
+
+k=media(m, n);
+
+printf("Média:%d\n", k);
+
+
+return(0);
+}

@@ -1,0 +1,43 @@
+/*-- Escreva a função: HIPOTENUSA. A função recebe o cateto adjacente (b) e o cateto oposto
+(a) e retorna o valor da hipotenusa
+
+*/
+
+#include<stdio.h>
+#include<locale.h>
+#include<string.h>
+#include<ctype.h>
+#include<math.h>
+
+int Hipotenusa(int CA, int CO)
+{
+    int H;
+    H=pow(CA, 2)+pow(CO ,2);
+    H=sqrt(H);
+
+return H;
+}
+
+
+
+
+main()
+{
+    int N1, N2, R;
+
+    setlocale(LC_ALL, "portuguese");
+
+
+
+    printf("Digite o cateto adjacente\n");
+    scanf("%d", &N1);
+
+    printf("Digite o cateto oposto\n");
+    scanf("%d", &N2);
+
+
+    R=Hipotenusa(N1, N2);
+
+    printf("HIPOTENUSA: %d\n" ,R);
+
+}

@@ -1,0 +1,80 @@
+
+
+/*- Criar um algoritmo que possa armazenar as alturas de dez atletas de cinco delegações que
+participarão dos jogos de verão. Imprimir a maior altura de cada delegação.*/
+#include <stdio.h>
+main(){
+
+int l,c,m[10][1], maior=0, maior2=0, maior3=0, maior4=0, maior5=0;
+
+for(l=0; l<10; l++)
+for(c=0; c<1; c++)
+{
+printf("\n insira a altura dos atletas:");
+scanf("%d", &m[l][c]);
+
+if(maior<m[l][c])
+maior=m[l][c];
+
+
+}
+
+printf("\n o maior atleta da delegacao 1 possui a seguinte altura:%d", maior);
+
+for(l=0; l<10; l++)
+for(c=0; c<1; c++)
+{
+printf("\n insira a altura dos atletas:");
+scanf("%d", &m[l][c]);
+
+if(maior2<m[l][c])
+maior2=m[l][c];
+
+
+}
+
+printf("\n o maior atleta da delegacao 2 possui a seguinte altura:%d", maior2);
+
+for(l=0; l<10; l++)
+for(c=0; c<1; c++)
+{
+printf("\n insira a altura dos atletas:");
+scanf("%d", &m[l][c]);
+
+if(maior3<m[l][c])
+maior3=m[l][c];
+
+
+}
+
+printf("\n o maior atleta da delegacao 3 possui a seguinte altura:%d", maior3);
+
+for(l=0; l<10; l++)
+for(c=0; c<1; c++)
+{
+printf("\n insira a altura dos atletas:");
+scanf("%d", &m[l][c]);
+
+if(maior4<m[l][c])
+maior4=m[l][c];
+
+
+}
+
+printf("\n o maior atleta da delegacao 4 possui a seguinte altura:%d", maior4);
+
+for(l=0; l<10; l++)
+for(c=0; c<1; c++)
+{
+printf("\n insira a altura dos atletas:");
+scanf("%d", &m[l][c]);
+
+if(maior5<m[l][c])
+maior5=m[l][c];
+
+
+}
+
+
+printf("\n o maior atleta da delegacao 5 possui a seguinte altura:%d", maior5);
+}

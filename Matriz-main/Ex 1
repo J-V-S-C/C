@@ -1,0 +1,48 @@
+1-
+
+/*- Fazer um programa para percorrer uma matriz de tamanho 4x4 e some os elementos da
+diagonal principal e diagonal secundária em duas variáveis diferentes.*/
+
+#include<stdio.h>
+#include<locale.h>
+
+main()
+
+{
+setlocale(LC_ALL, "portuguese");
+int A[4][4], c=0, l=0, s=0, s2=0;
+
+for (c=0;c<4;c++)
+        for (l=0;l<4;l++)
+
+{
+
+    printf("Digite um número:\\n");
+    scanf("%d", &A[c][l]);
+}
+
+for (c=0;c<4;c++)
+        for (l=0;l<4;l++)
+        {
+
+    if(l==c)
+    {
+        s=s+A[c][l];
+
+    }
+     if  ( c==4-1-l)
+    {
+        s2=s2+A[c][l];
+
+    }
+        }
+
+        printf("A soma da diagonal principal é %d:\\n", s);
+        printf("A soma da diagonal secundária é %d:\\n", s2);
+
+}
+
+/*11 12 13 14
+21 22 23 24
+31 32 33 34
+41 42 43 44*/

@@ -1,0 +1,42 @@
+/*Desenvolva uma função que converta os números digitados para números binários.
+*/
+
+#include<stdio.h>
+#include<locale.h>
+
+void bin( int n,     int b[32])
+{
+    int c=0;
+
+    do{
+        b[c]=n%2;
+        n=n/2;
+
+        c++;
+
+
+
+      }
+        while(n>0);
+
+        for(int k = c - 1 ; k >= 0 ; k--)
+        printf("%d", b[k]);
+}
+
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int num, v[32];
+
+    printf("\nEscreva um número inteiro: ");
+    scanf("%d", &num);
+
+
+    printf("O número %d em binário é:", num);
+
+    bin(num, v);
+
+
+
+}
